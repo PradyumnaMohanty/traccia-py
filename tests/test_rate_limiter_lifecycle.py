@@ -114,6 +114,7 @@ def test_stop_tracing_file_export_with_limiter():
             max_spans_per_second=10.0,
             auto_start_trace=False,
             enable_metrics=False,
+            use_otlp=False,
         )
         tracer = get_tracer("file_export_test")
         with tracer.start_as_current_span("file_span"):
